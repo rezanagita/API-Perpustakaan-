@@ -10,8 +10,8 @@ const {
   deleteStudentById,
 } = require('../controllers/studentController');
 
-
-router.post('/', protect, admin, createStudent);
+//route dibawah ini semua hanya bisa diakses oleh admin, dengan penerapan JWT yang diperoleh saat login sbg admin//
+router.post('/', protect, admin, createStudent); // (protect,admin) = merupakan identifikasi jk route hanya dapat dilakukan oleh admin //
 router.get('/', protect, admin, getAllStudents);
 router.get('/:id', protect, admin, getStudentById);
 router.put('/:id', protect, admin, updateStudentById);
