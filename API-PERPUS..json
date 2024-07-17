@@ -1,0 +1,911 @@
+{
+	"info": {
+		"_postman_id": "b0d14620-a196-42b3-9853-dbf3ffe90f20",
+		"name": "API-PERPUS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35362734"
+	},
+	"item": [
+		{
+			"name": "admin-register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"username\":\"zana\",\r\n      \"password\":\"zana123\",\r\n      \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"username\":\"eza\",\r\n      \"password\":\"eza123\",\r\n      \"role\": \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"zana\",\r\n    \"password\":\"zana123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Categories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTEzNjU1MywiZXhwIjoxNzIxMTQwMTUzfQ.yvDquYNjVoms1aVeJnUUz44mt8bc2ie3Jm2VlpXId50",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama_kategori\": \"Sci-Fi\",\r\n    \"deskripsi\": \"berisi tentang ilmu pengetahuan serta teknologi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/categories/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTEzNjU1MywiZXhwIjoxNzIxMTQwMTUzfQ.yvDquYNjVoms1aVeJnUUz44mt8bc2ie3Jm2VlpXId50",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama_kategori\": \"Science Fiction\",\r\n    \"deskripsi\": \"berisi tentang ilmu pengetahuan serta teknologi & Petualangan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/categories/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTEzNjU1MywiZXhwIjoxNzIxMTQwMTUzfQ.yvDquYNjVoms1aVeJnUUz44mt8bc2ie3Jm2VlpXId50",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/categories/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Publisher",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTEzNjU1MywiZXhwIjoxNzIxMTQwMTUzfQ.yvDquYNjVoms1aVeJnUUz44mt8bc2ie3Jm2VlpXId50",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama_penerbit\":\"Greenbook.ID\",\r\n    \"alamat\": \"Cirebon, Jawa Barat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/publishers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"publishers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Publisher",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/publishers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"publishers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Publisher ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/publishers/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"publishers",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Publisher ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTEzNjU1MywiZXhwIjoxNzIxMTQwMTUzfQ.yvDquYNjVoms1aVeJnUUz44mt8bc2ie3Jm2VlpXId50",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama_penerbit\": \"Greenbookid\",\r\n    \"alamat\": \"Cirebon, Jawa Barat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/publishers/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"publishers",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Publisher ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTEzNjU1MywiZXhwIjoxNzIxMTQwMTUzfQ.yvDquYNjVoms1aVeJnUUz44mt8bc2ie3Jm2VlpXId50",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/publishers/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"publishers",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTEzNjU1MywiZXhwIjoxNzIxMTQwMTUzfQ.yvDquYNjVoms1aVeJnUUz44mt8bc2ie3Jm2VlpXId50",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"judul_buku\" :\"Samuel\",\r\n    \"ID_kategori\" :1,\r\n    \"ID_penerbit\": 1,\r\n    \"ISBN\": 9786024513417,\r\n    \"nama_pengarang\": \"Ita Kurniawati\",\r\n    \"jumlah_stok\": \"4\",\r\n    \"sinopsis\": \"mengisahkan kehidupan Samuel Erlangga, seorang pria tampan yang berkepribadian tegas dan kejam di luar, namun manja di rumah. \",\r\n    \"tahun_terbit\": 2021\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/Books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/Books/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Books",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTEzNjU1MywiZXhwIjoxNzIxMTQwMTUzfQ.yvDquYNjVoms1aVeJnUUz44mt8bc2ie3Jm2VlpXId50",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"judul_buku\" :\"Samuel\",\r\n    \"ID_kategori\" :1,\r\n    \"ID_penerbit\": 1,\r\n    \"ISBN\": 9786024513417,\r\n    \"nama_pengarang\": \"Ita Kurniawati\",\r\n    \"jumlah_stok\": \"2\",\r\n    \"sinopsis\": \"mengisahkan kehidupan Samuel Erlangga, seorang pria tampan yang berkepribadian tegas dan kejam di luar, namun manja di rumah. \",\r\n    \"tahun_terbit\": 2021\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Books/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Books",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTEzNjU1MywiZXhwIjoxNzIxMTQwMTUzfQ.yvDquYNjVoms1aVeJnUUz44mt8bc2ie3Jm2VlpXId50",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/Books/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Books",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTE0MDI4NiwiZXhwIjoxNzIxMTQzODg2fQ.dLNjY4nGA_h2sArmue1Qcp3WqNMV9_klRAfReDNcBgY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"nama\": \"Nur Hazizah\",\r\n     \"jenis_kelamin\": \"perempuan\",\r\n      \"kelas\": \"7D\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Students",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTE0MDI4NiwiZXhwIjoxNzIxMTQzODg2fQ.dLNjY4nGA_h2sArmue1Qcp3WqNMV9_klRAfReDNcBgY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTE0MDI4NiwiZXhwIjoxNzIxMTQzODg2fQ.dLNjY4nGA_h2sArmue1Qcp3WqNMV9_klRAfReDNcBgY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/students/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTE0MDI4NiwiZXhwIjoxNzIxMTQzODg2fQ.dLNjY4nGA_h2sArmue1Qcp3WqNMV9_klRAfReDNcBgY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"nama\": \"Nurhazizah\",\r\n     \"jenis_kelamin\": \"perempuan\",\r\n      \"kelas\": \"7D\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTE0MDI4NiwiZXhwIjoxNzIxMTQzODg2fQ.dLNjY4nGA_h2sArmue1Qcp3WqNMV9_klRAfReDNcBgY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/students/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Loan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTE0MDI4NiwiZXhwIjoxNzIxMTQzODg2fQ.dLNjY4nGA_h2sArmue1Qcp3WqNMV9_klRAfReDNcBgY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID_siswa\": 4,\r\n    \"ID_buku\" : 1,\r\n    \"tanggal_pengembalian\": \"2024-8-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/loans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"loans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Loans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/loans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"loans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Return NoDenda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTE0MDI4NiwiZXhwIjoxNzIxMTQzODg2fQ.dLNjY4nGA_h2sArmue1Qcp3WqNMV9_klRAfReDNcBgY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID_siswa\":4,\r\n    \"ID_buku\":1,\r\n    \"ID_peminjaman\": 8,\r\n    \"tanggal_pengembalian\": \"2024-8-1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/returns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"returns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Return WDenda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTE0MDI4NiwiZXhwIjoxNzIxMTQzODg2fQ.dLNjY4nGA_h2sArmue1Qcp3WqNMV9_klRAfReDNcBgY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID_siswa\":2,\r\n    \"ID_buku\":2,\r\n    \"ID_peminjaman\": 4,\r\n    \"tanggal_pengembalian\": \"2024-07-21\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/returns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"returns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Return",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/returns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"returns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"username\":\"eza\",\r\n      \"password\":\"eza123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All user&admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTYzNmUyMDg1MWE0YTcyYjI0OTllNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTE0MDI4NiwiZXhwIjoxNzIxMTQzODg2fQ.dLNjY4nGA_h2sArmue1Qcp3WqNMV9_klRAfReDNcBgY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
