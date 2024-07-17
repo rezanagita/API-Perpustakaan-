@@ -20,6 +20,7 @@ const protect = async (req, res, next) => {
   }
 };
 
+//memastikan bahwa pengguna yang meminta sumber daya dilindungi memiliki peran 'admin'//
 const admin = (req, res, next) => {
   if (req.user && req.user.role === 'admin') {
     next();
